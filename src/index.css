@@ -26,7 +26,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 80%;
+  width: 90%;
   justify-content: center;
 }
 
@@ -74,7 +74,7 @@ select{
 }
 
 .table-container{
-  width: 80vw;
+  width: 90vw;
   height: auto;
   border: 3px solid rgba(60, 60, 60, 1);
   flex-direction: column;
@@ -88,8 +88,8 @@ select{
 
 
 .row{
-  width: 80vw;
-  height: 10vh;
+  width: 90vw;
+  height: 8vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -100,18 +100,18 @@ select{
 .row h2{
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   display: flex;
   color: rgba(60, 60, 60, 1);
   justify-content: center;
   align-items: center;
 }
 .column{
-  width:25%;
+  width:26%;
   height: 100%;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  font-size: 0.8vw;
+  font-size: 0.5vw;
   display: flex;
   color: rgba(60, 60, 60, 1);
   justify-content: center;
@@ -124,10 +124,20 @@ select{
   margin: 0;
 }
 .content{
-  font-size: 0.6vw;
+  font-size: 0.5vw;
   text-transform: none;
-  padding: 2%;
+  padding-left: 2%;
+  padding-right: 2%;
+ 
 
+}
+
+.small{
+  width: 10%;
+}
+
+.big{
+  width:45%;
 }
 
 .first{
@@ -183,6 +193,10 @@ select{
 
 .option-bar h1{
   font-size: 3vw;
+}
+
+.big{
+  display: none;
 }
 
   }

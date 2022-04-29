@@ -78,7 +78,9 @@ if(respondido){
   return "Sin respuesta"
 }
   }
-
+const getUrl=(id)=>{
+  return "https://bodarosaantillano.herokuapp.com/"+id
+}
   useEffect(() => {
     setTimeout(() => {
       getInvitados();
@@ -108,18 +110,20 @@ if(respondido){
         <div className="table-container">
           <div className="row titulo">
             <div className="column titulo"><h1>Nombre</h1></div>
-            <div className="column titulo"><h1>Invitados</h1></div>
-            <div className="column titulo"><h1>Asistencia</h1></div>
-            <div className="column titulo"><h1>RSVP</h1></div>
+            <div className="column titulo small"><h1>Invitados</h1></div>
+            <div className="column titulo small"><h1>Asistencia</h1></div>
+            <div className="column titulo small"><h1>RSVP</h1></div>
+            <div className="column titulo big"><h1>Link</h1></div>
           </div>
           {invitadosFiltrados.length>0 ?
           <>
           {invitadosFiltrados.map((element)=>{
             return    <div className="row">
             <div className="column content first"><h1>{element.titulo}</h1></div>
-            <div className="column content"><h1>{element.invites}</h1></div>
-            <div className="column content"><h1>{element.rsvp}</h1></div>
-            <div className="column content"><h1>{getRSVP(element.respondido)}</h1></div>
+            <div className="column content small"><h1>{element.invites}</h1></div>
+            <div className="column content small"><h1>{element.rsvp}</h1></div>
+            <div className="column content small"><h1>{getRSVP(element.respondido)}</h1></div>
+            <div className="column content big"><h1>{getUrl(element._id)}</h1></div>
           </div>
           })}
           </>:<div className="row"><h2>Lista Vacía</h2></div>}
